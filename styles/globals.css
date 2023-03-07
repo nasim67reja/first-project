@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 24px;
+  font-size: 20px;
+  color: #3f3f3f;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1360px;
+  padding: 0 3rem;
+  margin: 0 auto;
+}
+
+/*  */
+.bg-image {
+  background-image: url("/image/bg.png");
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.column-custom {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive Design */
+@media (max-width: 90.7em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 81.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 71.25em) {
+  html {
+    font-size: 45%;
+  }
+}
+
+/* Navbar  Responsiveness*/
