@@ -9,7 +9,7 @@ const NavEl = ({ classes }) => {
       {["Home", "Service", "About", "Faq", "Blog", "Contact"].map((el, i) => (
         <li
           key={i}
-          className="text-white text-[16px] lg:text-[20px] leading[24px]"
+          className="text-white  text-[14px] lg:text-[16px] leading[24px]"
         >
           <Link href={`/${el == "Home" ? "/" : el.toLowerCase()}`}>
             {el == "About" ? "About Us" : el}{" "}
