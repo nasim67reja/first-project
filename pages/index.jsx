@@ -6,20 +6,22 @@ import Franchise from "@/components/Franchise";
 import Help from "@/components/Help";
 import Hero from "@/components/Hero";
 import Member from "@/components/Member";
+import Test from "@/components/Test";
 
 
 
 const HomePage = () => {
   return (
     <>
-      <Hero />
+    <Test/>
+      {/* <Hero />
       <Help />
       <Franchise />
       <BuyFranchise />
       <Member />
       <Featured />
       <Contact />
-      <Experience />
+      <Experience /> */}
     </>
   );
 };
