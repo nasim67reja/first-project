@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -10,22 +10,50 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Pagination, Navigation } from "swiper";
+import SwiperCore, { Autoplay } from "swiper";
 import Image from "next/image";
 
 export default function Test() {
+
+
+
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight
+  });
+  const windowRef = useRef(null);
+
+  useEffect(() => {
+    windowRef.current = window;
+    const handleResize = () => {
+      setWindowSize({
+        width: windowRef.current.innerWidth,
+        height: windowRef.current.innerHeight
+      });
+    };
+    windowRef.current.addEventListener('resize', handleResize);
+
+    return () => windowRef.current.removeEventListener('resize', handleResize);
+  }, []);
+
+  console.log(windowSize.width)
+
+
+    SwiperCore.use([Autoplay]);
   return (
     <>
-    <div className="px-[5rem] border-2 border-black max-w-[1215px] mx-auto relative">
+    <div className="px-[8rem]  max-w-[550px] mx-auto relative center">
       <Swiper
-        slidesPerView={3}
+        // slidesPerView={windowSize.width<992?1:windowSize.width<1250?2:3}
+        slidesPerView={1}
+
         spaceBetween={40}
         loop={true}
         autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-            reverseDirection: true,
-            stopOnLastSlide: true,
-          }}
+          delay: 2500,
+          disableOnInteraction: false,
+          reverseDirection: true,
+        }}
         // pagination={{
         //   clickable: true,
         // }}
@@ -63,7 +91,7 @@ export default function Test() {
 const Slide = ({ data }) => {
     return (
       <>
-        <div className="w-[40rem] xl:w-[355px] bg-[#D9D9D9]   p-[1.6rem] rounded-[5px] border-[0.5px] border-[#A5A5A5] h-[550px]  transition-all duration-500">
+        <div className="w-[44rem] xl:w-[355px] bg-[#D9D9D9]   p-[1.6rem] rounded-[5px] border-[0.5px] border-[#A5A5A5] h-[550px]  transition-all duration-500">
           <div className="flex flex-col justify-between h-full">
             <h4 className="text-[16px] xl:text-[20px] font-semibold text-[#2D2525] text-center">
               {data.heading}
