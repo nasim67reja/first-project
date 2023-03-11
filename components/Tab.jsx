@@ -68,7 +68,7 @@ const HorizontalTab = () => {
         {tabs.map((tab, index) => (
           <div
             key={index}
-            className={`custom-clip-path px-[1rem] py-[2rem] cursor-pointer text-white text-[14px] md:text-[18px] ${
+            className={`custom-clip-path px-[1rem] py-[2rem] cursor-pointer text-white text-[14px] md:text-[18px] hover:scale-110 hover:translate-x-[1.5rem] transition-all ${
               index === activeTab ? "bg-[#2BA59F] " : "bg-[#DD8E58]"
             }`}
             onClick={() => setActiveTab(index)}

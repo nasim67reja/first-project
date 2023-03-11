@@ -36,20 +36,18 @@ export default function Test() {
     }
   }, []);
 
-  console.log(windowSize.width)
+  console.log(windowSize.width);
   SwiperCore.use([Autoplay]);
 
   return (
     <>
       <div
         className={`px-[10rem] max-w-[455px] lg:max-w-[900px] xl:max-w-[1350px]  mx-auto relative `}
-       
       >
         <Swiper
           slidesPerView={
             windowSize.width < 1024 ? 1 : windowSize.width < 1280 ? 2 : 3
           }
-
           spaceBetween={40}
           loop={true}
           autoplay={{
@@ -119,11 +117,8 @@ const Slide = ({ data }) => {
               {data.description}
             </p>
             <div className="flex flex-col items-start gap-[2px] mt-[1rem]">
-              <button className="bg-[#4B93FF] text-white rounded-[5px] px-[3.6rem] py-[0.5rem] text-[16px] hover:outline hover:outline-1 hover:bg-white hover:text-t-color transition-all">
-                Read
-              </button>
-              <button className="text-white px-[3.6rem] py-[0.5rem] text-[16px]">
-                more
+              <button className="bg-btn-bg text-white rounded-[5px] px-[3.6rem] py-[0.5rem] text-[16px] hover:outline hover:outline-1 hover:bg-white hover:text-t-color transition-all">
+                Read more
               </button>
             </div>
           </div>

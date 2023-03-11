@@ -17,7 +17,7 @@ const HomePage = () => {
       <Help />
       <Tab />
 
-      <div className="my-[8rem] mx-auto max-w-[1474px] px-[3rem]">
+      <div className="py-[8rem] mx-auto max-w-[1474px] px-[3rem]">
         <img
           src="/images/ad.png"
           alt="forbes,usa-today logo "
