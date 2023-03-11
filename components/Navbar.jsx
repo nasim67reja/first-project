@@ -2,70 +2,26 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import Link from "next/link";
-
-const NavEl = ({ classes }) => {
-  return (
-    <ul className={`${classes} flex   lg:gap-[2.5rem] list-none items-center`}>
-      {["Home", "Service", "About", "Faq", "Blog", "Contact"].map((el, i) => (
-        <li
-          key={i}
-          className="text-white  text-[14px] lg:text-[16px] leading[24px]"
-        >
-          <Link href={`/${el == "Home" ? "/" : el.toLowerCase()}`}>
-            {el == "About" ? "About Us" : el}{" "}
-          </Link>
-        </li>
-      ))}
-      <li className="bg-[rgb(197,136,82)] text-white text-[16px] lg:[20px] leading-[24px] px-[36px] py-[17px] rounded-[0.8rem] cursor-pointer transition-all hover:bg-[rgba(197,136,82,0.52)]">
-        Get Service
-      </li>
-    </ul>
-  );
-};
+import Button from "./reuse/Button";
 
 const Navbar = () => {
-  const [mobileNavIsShown, setMobileNavIsShown] = useState(false);
   return (
     <>
-      {/* mobile */}
-
-      <nav
-        className={` center lg:hidden top-0 left-0 absolute min-h-screen w-screen bg-[rgba(0,0,0,0.7)] z-20  transition-all ${
-          !mobileNavIsShown && "translate-x-[100%]"
-        } duration-500`}
-      >
-        <div
-          className="absolute top-[5%] right-[3%] z-20 text-white cursor-pointer"
-          onClick={() => setMobileNavIsShown(false)}
-        >
-          <HiOutlineX />
-        </div>
-        <NavEl classes="flex-col gap-[3rem]" />
-      </nav>
-
       <div className="bg-[#222A2E]">
         <div className="container">
-          <div className="flex justify-between items-center  h-[117px]">
-            <div className="relative z-20 w-[200px] h-[60px]">
+          <div className="flex justify-between items-center ">
+            <div>
               <Image
-                src="/images/logoP.png"
+                src="/images/miller.png"
                 alt="logo"
-                width={267}
-                height={82}
-                className=" w-[160px] lg:w-[267px] lg:h-[82] h-[70px]"
+                width={147}
+                height={147}
+                // className=" w-[120px] lg:w-[147px] lg:h-[147px] h-[120px] "
+                className=" w-[80px] sm:w-[100px] sm:h-[100px] md:w-[120px] md:h-[120px]  h-[80px] lg:w-[147px] lg:h-[147px] "
               />
             </div>
-            <div
-              className="text-white cursor-pointer lg:hidden"
-              onClick={() => setMobileNavIsShown(true)}
-            >
-              {!mobileNavIsShown && (
-                <HiOutlineMenu className="w-[50px] h-[50px] border" />
-              )}
-            </div>
-            {/* large screen */}
-            <nav className="lg:block hidden">
-              <NavEl classes="gap-[1.5rem]" />
+            <nav>
+              <Button text="Get Service" />
             </nav>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Footer = () => {
@@ -7,8 +8,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[2rem] lg:gap-[2rem] px-[3rem] lg:px-[1rem]">
           <div className="flex flex-col justify-between">
             <div>
-              <div className="center">
-                <img src="/images/logo.svg" alt="logo" className="mb-[2rem]" />
+              <div className=" flex justify-center items-center lg:block">
+                <Image
+                  src="/images/miller.png"
+                  alt="logo"
+                  width={147}
+                  height={147}
+                  className=" w-[147px] lg:w-[147px] lg:h-[147px] h-[147px]"
+                />
               </div>
               <p className="text-[14px] lg:text-[15px] opacity-80 text-center">
                 Mariel Miller has over 17 years of valuable experience in the
@@ -22,7 +29,7 @@ const Footer = () => {
           </div>
 
           {/* 2 */}
-          <div className="flex flex-col gap-[5rem] py-[2.5rem]">
+          <div className="flex flex-col gap-[5rem] lg:gap-[9rem] py-[2.5rem]">
             <h4 className="text-center">CONTACT INFO</h4>
             <p className="text-[14px] lg:text-[15px] opacity-80 text-center">
               Mariel Miller Espat & Johnson, P.A. 410 South Ware Blvd. Suite
@@ -32,7 +39,7 @@ const Footer = () => {
 
           {/* 3 */}
 
-          <div className="flex flex-col gap-[5rem] py-[2.5rem] opacity-80">
+          <div className="flex flex-col gap-[5rem] lg:gap-[9rem] py-[2.5rem] opacity-80">
             <h4 className="text-center">USEFUL LINKS</h4>
             <p className="text-[14px] lg:text-[15px] px-[6px] md:px-[10px] lg:px-[16px] text-center">
               Apollo Beach, Arcadia, Auburndale, Avon Park, Bartow, Brandon,
@@ -44,7 +51,7 @@ const Footer = () => {
 
           {/* 4 */}
 
-          <div className="flex flex-col gap-[5rem] py-[2.5rem]">
+          <div className="flex flex-col gap-[5rem] lg:gap-[9rem] py-[2.5rem]">
             <h4 className="text-center">SERVICE</h4>
 
             <ul className="text-[14px] lg:text-[15px] column-custom gap-[5px] opacity-80 center">

@@ -89,3 +89,12 @@ body {
 
 
 
+/* accordion */
+
+/* .accordion-content {
+  display: none;
+} */
+
+.custom-clip-path {
+  clip-path: polygon(92% 0, 100% 50%, 92% 100%, 0 100%, 0 0);
+}
