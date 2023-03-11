@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Hero = () => {
@@ -33,14 +34,19 @@ const Hero = () => {
                   className="h-[120%] opacity-60"
                 />
               </div>
-
-              <Image
-                src="/images/youTube.svg"
-                alt="you-tube logo"
-                width={60}
-                height={60}
-                className="absolute top-[36%] left-[44%] z-50 cursor-pointer w-[6rem] h-[6rem]"
-              />
+              <Link
+              target="_blank"
+                href="https://www.youtube.com/watch?v=vkmAhUtoyDw"
+                className="border-2 border-white"
+              >
+                <Image
+                  src="/images/youTube.svg"
+                  alt="you-tube logo"
+                  width={60}
+                  height={60}
+                  className="absolute top-[40%] lg:top-[36%] left-[40%] lg:left-[44%] z-50 cursor-pointer w-[6rem] h-[6rem]"
+                />
+              </Link>
               <div className="absolute bottom-[25%] left-[32%] z-50 cursor-pointer text-[30px] md:text-[40px] lg-[64px] text-white">
                 WATCH ME
               </div>

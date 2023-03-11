@@ -21,7 +21,7 @@ const Box = ({ image, heading }) => {
         Financing? Your Franchise Coach is here to help.
       </p>
       <div className="center">
-        <button className="bg-[#222A2E] text-white py-[3px] px-[12px] rounded-md text-[15px] lg:text-[16px]">
+        <button className="bg-[#222A2E] text-white py-[3px] px-[12px] rounded-md text-[15px] lg:text-[16px] hover:text-t-color transition-all hover:bg-white hover:outline hover:outline-1 hover:outline-t-color">
           Learn More
         </button>
       </div>

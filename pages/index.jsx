@@ -13,15 +13,15 @@ import Test from "@/components/Test";
 const HomePage = () => {
   return (
     <>
-    <Test/>
-      {/* <Hero />
+    {/* <Test/> */}
+      <Hero />
       <Help />
       <Franchise />
       <BuyFranchise />
       <Member />
       <Featured />
       <Contact />
-      <Experience /> */}
+      <Experience />
     </>
   );
 };
