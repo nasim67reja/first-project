@@ -25,7 +25,7 @@ const Content = ({ title }) => {
         <Image
           width={318}
           height={397}
-          alt="a women"
+          alt="women"
           src="/images/Women.png"
           className="w-[95%]"
         />

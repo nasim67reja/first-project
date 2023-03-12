@@ -3,18 +3,19 @@ import React from "react";
 
 import { useState } from "react";
 
-function Accordion({ title, content }) {
+function Accordion({ title, content, first }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };
-  console.log(isOpen);
 
   return (
-    <div>
+    <>
       <div
-        className=" b flex justify-between items-center cursor-pointer py-[2rem]  border-t border-backg px-[3rem] rounded-[1rem]"
+        className={`flex justify-between items-center cursor-pointer py-[2rem]  ${
+          !first ? "border-t border-backg" : ""
+        } px-[3rem] rounded-[1rem]`}
         onClick={toggleAccordion}
       >
         <h3 className="text-[16px] lg:text-[20px] text-[#000000] leading-[27px] font-normal">
@@ -27,6 +28,7 @@ function Accordion({ title, content }) {
               height={30}
               src="/images/down.svg"
               alt="down-arrow"
+              className="w-[60%] h-[60%]"
             />
           </span>
           <span className={`close-icon ${isOpen ? "" : "hidden"}`}>
@@ -35,6 +37,7 @@ function Accordion({ title, content }) {
               height={25}
               src="/images/close.svg"
               alt="close-arrow"
+              className="w-[60%] h-[60%]"
             />
           </span>
         </button>
@@ -53,7 +56,7 @@ function Accordion({ title, content }) {
           {content}
         </p>
       </div>
-    </div>
+    </>
   );
 }
 
@@ -76,6 +79,7 @@ const Faq = () => {
           <Accordion
             title="How i am Buy Franchise ?"
             content={<ContentDummy />}
+            first={true}
           />
           <Accordion
             title="When i need to buy Franchise?"
